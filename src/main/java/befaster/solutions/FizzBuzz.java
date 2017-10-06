@@ -7,15 +7,24 @@ public class FizzBuzz {
         boolean isFizz = ((number % 3) == 0) || (numAsStr.indexOf('3') >= 0);
         boolean isBuzz = ((number % 5) == 0) || (numAsStr.indexOf('5') >= 0);
         boolean isDeluxe = isDeluxe(numAsStr);
-        if (isFizz && isBuzz) {
-            return "fizz buzz";
-        } else if (isFizz) {
-            return "fizz";
-        } else if (isBuzz) {
-            return "buzz";
-        } else {
+        if (!isFizz && !isBuzz && !isDeluxe) {
             return numAsStr;
         }
+        String resp = isFizz ? "fizz" : "";
+        if (isBuzz) {
+            resp = append(resp, "buzz");
+        }
+        if (isDeluxe) {
+            resp = append(resp, "deluxe");
+        }
+        return resp;
+    }
+
+    private static String append(String str, String text) {
+        if (str.length() == 0) {
+            return text;
+        }
+        return str + " " + text;
     }
 
     private static boolean isDeluxe(String num) {
