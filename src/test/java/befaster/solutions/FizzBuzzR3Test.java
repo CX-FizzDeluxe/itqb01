@@ -3,7 +3,7 @@ package befaster.solutions;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FizzBuzzR2Test {
+public class FizzBuzzR3Test {
 
     @Test
     public void test_is_fizz() {
