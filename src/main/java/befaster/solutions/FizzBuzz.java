@@ -7,6 +7,7 @@ public class FizzBuzz {
         boolean isFizz = ((number % 3) == 0) || (numAsStr.indexOf('3') >= 0);
         boolean isBuzz = ((number % 5) == 0) || (numAsStr.indexOf('5') >= 0);
         boolean isDeluxe = isDeluxe(numAsStr);
+        boolean isOdd = (number & 1) == 1;
         if (!isFizz && !isBuzz && !isDeluxe) {
             return numAsStr;
         }
@@ -15,7 +16,7 @@ public class FizzBuzz {
             resp = append(resp, "buzz");
         }
         if (isDeluxe) {
-            resp = append(resp, "deluxe");
+            resp = append(resp, isOdd ? "fake deluxe" : "deluxe");
         }
         return resp;
     }

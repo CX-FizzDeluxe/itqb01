@@ -22,7 +22,6 @@ public class FizzBuzzR4Test {
 
     @Test
     public void test_is_deluxe() {
-        Assert.assertEquals("deluxe", FizzBuzz.fizzBuzz(11));
         Assert.assertEquals("deluxe", FizzBuzz.fizzBuzz(2222));
     }
 
