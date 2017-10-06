@@ -4,11 +4,31 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
         String numAsStr = number.toString();
-        boolean isFizz = ((number % 3) == 0) || (numAsStr.indexOf('3') >= 0);
-        boolean isBuzz = ((number % 5) == 0) || (numAsStr.indexOf('5') >= 0);
-        boolean isDeluxe = isDeluxe(numAsStr);
+        boolean isMultipleOf3 = (number % 3) == 0;
+        boolean has3 = numAsStr.indexOf('3') >= 0;
+        boolean isFizz;
+        boolean isDeluxe = false;
+        if (isMultipleOf3 || has3) {
+            isFizz = true;
+            if (isMultipleOf3 && has3) {
+                isDeluxe = true;
+            }
+        } else {
+            isFizz = false;
+        }
+        boolean isMultipleOf5 = (number % 5) == 0;
+        boolean has5 = numAsStr.indexOf('5') >= 0;
+        boolean isBuzz;
+        if (isMultipleOf5 || has5) {
+            isBuzz = true;
+            if (isMultipleOf5 && has5) {
+                isDeluxe = true;
+            }
+        } else {
+            isBuzz = false;
+        }
         boolean isOdd = (number & 1) == 1;
-        if (!isFizz && !isBuzz && !isDeluxe) {
+        if (!isFizz && !isBuzz) {
             return numAsStr;
         }
         String resp = isFizz ? "fizz" : "";
@@ -26,18 +46,5 @@ public class FizzBuzz {
             return text;
         }
         return str + " " + text;
-    }
-
-    private static boolean isDeluxe(String num) {
-        if (num.length() < 2) {
-            return false;
-        }
-        char firstDigit = num.charAt(0);
-        for (int i = 1; i < num.length(); i++) {
-            if (num.charAt(i) != firstDigit) {
-                return false;
-            }
-        }
-        return true;
     }
 }
