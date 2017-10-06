@@ -16,7 +16,7 @@ public class FizzBuzzR2Test {
     public void test_is_buzz() {
         Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(5));
         Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(25));
-        Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(51));
+        Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(52));
     }
 
     @Test
@@ -30,6 +30,5 @@ public class FizzBuzzR2Test {
     public void test_neither_fizz_nor_buzz() {
         Assert.assertEquals("1", FizzBuzz.fizzBuzz(1));
         Assert.assertEquals("4", FizzBuzz.fizzBuzz(4));
-        Assert.assertEquals("31", FizzBuzz.fizzBuzz(31));
     }
 }
