@@ -6,7 +6,7 @@ public class FizzBuzz {
         String numAsStr = number.toString();
         boolean isFizz = ((number % 3) == 0) || (numAsStr.indexOf('3') >= 0);
         boolean isBuzz = ((number % 5) == 0) || (numAsStr.indexOf('5') >= 0);
-        boolean isDelux = isDeluxe(numAsStr);
+        boolean isDeluxe = isDeluxe(numAsStr);
         if (isFizz && isBuzz) {
             return "fizz buzz";
         } else if (isFizz) {

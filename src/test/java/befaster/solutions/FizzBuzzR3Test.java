@@ -15,8 +15,15 @@ public class FizzBuzzR3Test {
     @Test
     public void test_is_buzz() {
         Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(5));
+        Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(10));
         Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(25));
         Assert.assertEquals("buzz", FizzBuzz.fizzBuzz(52));
+    }
+
+    @Test
+    public void test_is_deluxe() {
+        Assert.assertEquals("deluxe", FizzBuzz.fizzBuzz(11));
+        Assert.assertEquals("deluxe", FizzBuzz.fizzBuzz(2222));
     }
 
     @Test
@@ -27,7 +34,22 @@ public class FizzBuzzR3Test {
     }
 
     @Test
-    public void test_neither_fizz_nor_buzz() {
+    public void test_is_fizz_and_deluxe() {
+        Assert.assertEquals("fizz deluxe", FizzBuzz.fizzBuzz(111));
+    }
+
+    @Test
+    public void test_is_buzz_and_deluxe() {
+        Assert.assertEquals("buzz deluxe", FizzBuzz.fizzBuzz(55));
+    }
+
+    @Test
+    public void test_is_fizz_buzz_and_deluxe() {
+        Assert.assertEquals("fizz buzz deluxe", FizzBuzz.fizzBuzz(555));
+    }
+
+    @Test
+    public void test_neither_fizz_nor_buzz_nor_deluxe() {
         Assert.assertEquals("1", FizzBuzz.fizzBuzz(1));
         Assert.assertEquals("4", FizzBuzz.fizzBuzz(4));
     }
