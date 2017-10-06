@@ -3,7 +3,7 @@ package befaster.solutions;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class FizzBuzzR3Test {
+public class FizzBuzzR4Test {
 
     @Test
     public void test_is_fizz() {
@@ -27,6 +27,11 @@ public class FizzBuzzR3Test {
     }
 
     @Test
+    public void test_is_fake_deluxe() {
+        Assert.assertEquals("fake deluxe", FizzBuzz.fizzBuzz(11));
+    }
+
+    @Test
     public void test_fizz_and_buzz() {
         Assert.assertEquals("fizz buzz", FizzBuzz.fizzBuzz(0));
         Assert.assertEquals("fizz buzz", FizzBuzz.fizzBuzz(15));
@@ -35,17 +40,22 @@ public class FizzBuzzR3Test {
 
     @Test
     public void test_is_fizz_and_deluxe() {
-        Assert.assertEquals("fizz deluxe", FizzBuzz.fizzBuzz(111));
+        Assert.assertEquals("fizz deluxe", FizzBuzz.fizzBuzz(222));
     }
 
     @Test
-    public void test_is_buzz_and_deluxe() {
-        Assert.assertEquals("buzz deluxe", FizzBuzz.fizzBuzz(55));
+    public void test_is_fizz_and_fake_deluxe() {
+        Assert.assertEquals("fizz fake deluxe", FizzBuzz.fizzBuzz(111));
     }
 
     @Test
-    public void test_is_fizz_buzz_and_deluxe() {
-        Assert.assertEquals("fizz buzz deluxe", FizzBuzz.fizzBuzz(555));
+    public void test_is_buzz_and_fake_deluxe() {
+        Assert.assertEquals("buzz fake deluxe", FizzBuzz.fizzBuzz(55));
+    }
+
+    @Test
+    public void test_is_fizz_buzz_and_fake_deluxe() {
+        Assert.assertEquals("fizz buzz fake deluxe", FizzBuzz.fizzBuzz(555));
     }
 
     @Test
